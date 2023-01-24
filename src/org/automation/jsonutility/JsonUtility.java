@@ -27,13 +27,8 @@ public class JsonUtility {
 	}
 	public static void getCountryCount(JSONArray players)
 	{
-	//	Integer countrycount=0;
-	//	Integer rolecount=0;
-		
 		for (int i = 0; i < players.size(); i++) {
-			   JSONObject obj= (JSONObject) players.get(i);
-		//for(JSONObject json1 : players)
-		
+  		   JSONObject obj= (JSONObject) players.get(i);
 			String countryName = (String) obj.get("country");
             String role = (String)obj.get("role");
             Integer countrycount = (Integer) Country.get(countryName);
@@ -42,8 +37,6 @@ public class JsonUtility {
 				Country.put(countryName, 1);
 			}
 			else {
-				
-				//countrycount=countrycount+1;
 				Country.put(countryName, ++countrycount);
 			}
 			
@@ -54,7 +47,6 @@ public class JsonUtility {
 				
 			}
 			else {
-				//rolecount=rolecount+1;
 				Roles.put(role, ++rolecount);
 			}
 		}

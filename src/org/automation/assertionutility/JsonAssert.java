@@ -3,7 +3,7 @@ import org.automation.jsonutility.*;
 
 public class JsonAssert {
 	
-	public boolean isMax4ForiegnPlayers()
+	public boolean isMax4ForeignPlayers()
 	{
 		Integer indianPlayers = JsonUtility.Country.get("India");
 		if(indianPlayers == null || indianPlayers <7) {

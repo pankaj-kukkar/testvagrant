@@ -22,16 +22,18 @@ public class TestCases {
 	
 	@Test
 	public void TC001_validateForeignPlayersInTeam() {
-		System.out.println("Getting the Foreign players numbers from the json file...");
-		boolean isFourForiegenPlayes = j.isMax4ForiegnPlayers();
-		Assert.assertEquals(isFourForiegenPlayes,true,"There are  more than 4 foreign players in this team");
+		System.out.println("Getting the Foreign players numbers for Team '"+ JsonUtility.teamName+"'");
+		boolean isFourForeigenPlayes = j.isMax4ForeignPlayers();
+		Assert.assertEquals(isFourForeigenPlayes,true,"There are  more than 4 foreign players in the team '"+ JsonUtility.teamName +"'");
+		System.out.println("Foreign players are not more than 4 in the team '" + JsonUtility.teamName +"'");
 	}
 	
 	@Test
 	public void TC002_validateWicketKeeperInTeam() {
-		boolean isAtleastOneWiketKeeper = j.isAtleast1WicketKeeper();
-		System.out.println("Getting the number of wiket keepers from the json file...");
-		Assert.assertEquals(isAtleastOneWiketKeeper,true, "There is less than 1 wicket keeper in this team");
+		boolean isAtleastOneWicketKeeper = j.isAtleast1WicketKeeper();
+		System.out.println("Getting the number of wicket keepers for Team '"  + JsonUtility.teamName+"'");
+		Assert.assertEquals(isAtleastOneWicketKeeper,true, "There is less than 1 wicket keeper in the team '" + JsonUtility.teamName+"'");
+		System.out.println("There is at-least 1 wicket keeper in the Team '" + JsonUtility.teamName +"'");
 	}
 
 }

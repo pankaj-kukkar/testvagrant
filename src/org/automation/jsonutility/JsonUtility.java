@@ -10,6 +10,7 @@ public class JsonUtility {
 	
 	public static HashMap<String,Integer> Roles = new HashMap<String, Integer>();
 	public static HashMap<String,Integer> Country = new HashMap<String, Integer>();
+	public static String teamName;
 	public static JSONArray getPlayerListFromJson(String jsonFilePath)
 	{
 		JSONObject jsonObj;
@@ -19,6 +20,7 @@ public class JsonUtility {
 			FileReader fr = new FileReader(jsonFilePath);
 			jsonObj = (JSONObject) jsonParser.parse(fr);
 			players =  (JSONArray) jsonObj.get("player");
+			teamName= (String) jsonObj.get("name");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;

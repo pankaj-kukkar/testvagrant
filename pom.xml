@@ -3,18 +3,6 @@
   <groupId>RCB_Automation</groupId>
   <artifactId>RCB_Automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
-    <sourceDirectory>src</sourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <release>17</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
   <dependencies>
 	 <dependency>
     	<groupId>com.googlecode.json-simple</groupId>

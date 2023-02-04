@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="RCB_Automation" target="17" />
+      <module name="RCB_Automation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

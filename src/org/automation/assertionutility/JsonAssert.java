@@ -5,20 +5,18 @@ public class JsonAssert {
 	
 	public boolean isMax4ForeignPlayers()
 	{
+		boolean isMax4Players=true;
 		Integer indianPlayers = JsonUtility.Country.get("India");
-		if(indianPlayers == null || indianPlayers <7) {
-			return   false;
-
-		} else
-			return true;
+		if(indianPlayers == null || indianPlayers <7)
+			isMax4Players = false;
+		return isMax4Players;
 	}
 	public boolean isAtleast1WicketKeeper(){
+		boolean isAtleast1WeeketKeeper= true;
 		Integer wicketKeeperCount = JsonUtility.Roles.get("Wicket-keeper");
-		if(wicketKeeperCount==null){
-			return false;
-		}
-		else {
-			return true;
-		}
+		if(wicketKeeperCount==null)
+			 isAtleast1WeeketKeeper= false;
+		return isAtleast1WeeketKeeper;
+
 	}
 }

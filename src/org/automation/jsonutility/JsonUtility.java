@@ -17,8 +17,7 @@ public class JsonUtility {
 		JSONArray players;
 		JSONParser jsonParser = new JSONParser();
 		try {
-			FileReader fr = new FileReader(jsonFilePath);
-			jsonObj = (JSONObject) jsonParser.parse(fr);
+			jsonObj = (JSONObject) jsonParser.parse(new FileReader(jsonFilePath));
 			players =  (JSONArray) jsonObj.get("player");
 			teamName= (String) jsonObj.get("name");
 		} catch (Exception e) {
@@ -33,24 +32,15 @@ public class JsonUtility {
   		   JSONObject obj= (JSONObject) players.get(i);
 			String countryName = (String) obj.get("country");
             String role = (String)obj.get("role");
-            Integer countrycount = (Integer) Country.get(countryName);
-			if(countrycount == null)
-			{
+			if(Country.get(countryName) == null)
 				Country.put(countryName, 1);
-			}
-			else {
-				Country.put(countryName, ++countrycount);
-			}
-			
+			else
+				Country.put(countryName, (Country.get(countryName)).intValue() + 1);
 			Integer rolecount = (Integer) Roles.get(role);
-			if(rolecount == null)
-			{
+			if(Roles.get(role) == null)
 				Roles.put(role, 1);
-				
-			}
-			else {
-				Roles.put(role, ++rolecount);
-			}
+			else
+				Roles.put(role, Roles.get(role).intValue()+1);
 		}
 	}
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="org.automation.jsonutility.JsonUtility"/>
+    <fullyQualifiedTypeName name="org.automation.assertionutility.JsonAssert"/>
+    <fullyQualifiedTypeName name="assertionutility.JsonAssert"/>
+    <fullyQualifiedTypeName name="utility.JsonUtility"/>
+</qualifiedTypeNameHistroy>
